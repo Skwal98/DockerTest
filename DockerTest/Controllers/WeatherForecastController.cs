@@ -29,5 +29,11 @@ namespace DockerTest.Controllers
             })
             .ToArray();
         }
+
+        [HttpGet(Name = "test")]
+        public string test()
+        {
+            return "working";
+        }
     }
 }
