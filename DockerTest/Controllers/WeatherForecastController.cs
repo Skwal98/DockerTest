@@ -30,7 +30,7 @@ namespace DockerTest.Controllers
             .ToArray();
         }
 
-        [HttpGet(Name = "test")]
+        [HttpGet("test")]
         public string test()
         {
             return "working";
