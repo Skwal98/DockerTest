@@ -1,2 +1,9 @@
 FROM mcr.microsoft.com/mssql/server:2022-latest AS base
-RUN -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Qwert!2345" -p 1450:1433 --name sqlserverdb -d mcr.microsoft.com/mssql/server:2022-latest
+
+FROM mcr.microsoft.com/mssql/server:2022-latest
+ENV ACCEPT_EULA=Y
+ENV SA_PASSWORD=Qwert!2345
+ENV MSSQL_PID=Developer
+ENV MSSQL_TCP_PORT=1433
+
+RUN
